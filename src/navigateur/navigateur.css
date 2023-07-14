@@ -1,0 +1,43 @@
+
+#root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 8%;
+    height: 100vh;
+    /* padding:  20px 0;  */
+    background-color:#444444;
+    z-index: 1000;
+
+}
+.lien{
+    text-decoration: none;
+    font-size: 20px;
+    /* background-color: blue; */
+    color:#dfdfdf;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding:50px 0;
+    
+}
+.active{
+    color:#f47049;
+    background-color: #f8f8f8;
+}
+.name{
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+}
+.icon{
+    font-size: 35px;
+}

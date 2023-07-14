@@ -1,0 +1,115 @@
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* start */
+.logo {
+    padding: 15px;
+    margin-left: 10px;
+}
+
+.btnAlarm {
+    text-align: center;
+}
+
+.addAlarm {
+    text-align: center;
+    border: none;
+    background-color: rgb(255, 152, 49);
+    width: 80px;
+    color: white;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+.newAlarm {
+    background-color:  rgb(255, 152, 49);
+    color: white;
+    height: 70px;
+    font-size: 20px;
+
+}
+
+.annuler {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    color: white;
+    background-color:  rgb(255, 152, 49);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodu {
+    height: 100vh;
+}
+
+.time {
+    font-size: 60px;
+    border: none;
+    outline: none;
+    color: rgb(101, 101, 101);
+    margin-top: 20px;
+}
+
+
+.enregAlarm {
+    text-align: center;
+    border: none;
+    background-color: rgb(255, 152, 49);
+    width: 140px;
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0;
+    margin-top: 80px;
+}
+
+input[type="time"] {
+    position: relative;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: block;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: transparent;
+}
+.d-none{
+    display: none;
+}
+.setAlarm {
+    width: 700px;
+    height: 500px;
+    position: relative;
+    border: 1px solid gray
+}
+.finaleAlarm{
+    width: 500px;
+    height: 80px;
+    border: 1px solid  rgb(255, 152, 49);
+    margin-left: 400px;
+    margin-bottom: 10px;
+}
+
+.x{
+    border: none;
+    width: 20px;
+}

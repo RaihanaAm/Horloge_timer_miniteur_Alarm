@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "numerique";
+    src: url(../assets/fonts/TickingTimebombBB.ttf);
+   
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+};
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.horloge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92%;
+    /* background-color: #eaeaea; */
+    height: 100vh;
+    font-family: "poppins";
+}
+.exacte{
+    color:#5a5a5a;
+    background-color: white;
+    width: 89.5%;
+    height: 300px;
+}
+.hourExact{
+   font-size: 115px;
+   margin: 0;
+   color: rgb(71, 71, 71);
+   outline: none;
+   font-family: "numerique";
+
+}
+.seconds{
+    color: #f37048;
+}
+.allCountries{
+    display: flex;
+    /* justify-content: center; */
+    width: 90%;
+    color: #5a5a5a;
+    font-family: "poppins";
+}
+
+.mondial{
+    width: 299px;
+    height: 190px;
+    background-color:white;
+    margin: 35px 8px;
+}
+.contiresName{
+    margin:20px 0 15px 0px ;
+    font-size: 18px;
+    font-family: "poppins";
+    text-align: center;
+
+}
+.heurCountries{
+    text-align: center;
+    margin-top: 25px;
+    font-family: "numerique";
+}
+.decalage{
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+hr{
+    width: 80%;
+    text-align: start;
+    border: 1px solid #f27048;
+}
