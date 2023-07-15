@@ -1,46 +1,169 @@
+@font-face {
+    font-family: "poppins";
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+;
+
 .flex {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-.global {
+
+.Chronos {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92%;
+    /* background-color: #eaeaea; */
     height: 100vh;
-    background: rgb(240, 240, 240);
+    font-family: "poppins";
 }
-.tops{
-    width: 120px;
-    height: 20px;
-    border-radius: 5px;
-    background-color: #9d91ff;
-    z-index: 13;
+
+
+
+.Chrono {
+    font-size: 18px;
+    /* background-color: blueviolet; */
+    width: 90%;
+    height: 30%;
 }
-.top{
-    margin-bottom: -5px;
-    width: 25px;
-    height: 15px;
-    background-color:#7066ba;
+
+.ChronoTime {
+    font-size: 65px;
+    color: #f37048;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 75%;
+    font-size: 16px;
+    color: #f37048;
+    padding: 0;
 
 }
 
-.glob {
-background-color: #9d91ff;
-    width: 360px;
-    height: 360px;
-    border-radius: 500%;
+.title {
+    margin: 0;
 }
-.glo{
+
+.houres {
+    display: flex;
+    width: 93%;
+    /* background-color: rgba(0, 255, 255, 0.309); */
+    justify-content: space-evenly;
+    position: absolute;
+    top: 250%;
+}
+
+.hour {
+    font-weight: bolder;
+    font-size: 85px;
+    color: #676767;
+    margin: 0;
+
+
+
+}
+
+.numbers {
+    font-weight: bolder;
+    font-size: 85px;
+    /* background-color: brown; */
+    padding: 35px 60px;
+    color: #ffffff;
+    margin: 0 15px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.tours {
+    margin: 40px 0;
+    display: flex;
+    height: 1px;
+    justify-content: space-evenly;
+    font-size: 12px;
+    color: #f37048;
+}
+
+.tour {
+    margin: 0 15px;
+
+
+}
+
+.records {
+    margin: 20px 0;
+    height: auto;
+    overflow-y: auto;
+
+}
+
+.record {
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    color: #676767;
     width: 300px;
-    height: 300px;
-    border-radius: 500%;
-    background-color: rgb(53, 53, 53);
+
+    height: 30px;
+    padding: 15px 15px 0;
+    margin: 8px;
+    font-size: 16px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-around;
 }
-.h1{
-    font-size: 50px;
-    width: 200px;
-    height: 60px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 20px;
-    text-align: center;
+
+.order {
+    color: #f37048;
 }
- 
+
+.none {
+    display: none;
+}
+
+.button {
+    width: 80px;
+    height: 40px;
+    margin-left: 5px;
+    background-color: rgb(7, 51, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.btnn {
+    margin: 20px 0 30px 0;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.Tour:disabled {
+    background-color: #97b5f070;
+}
+
+.play:disabled {
+    background-color: #4aae7087;
+}
+
+.stop {
+    background-color: #fbad10;
+}
+
+.reset {
+    background-color: #f36160;
+
+}
+
+.play {
+    background-color: #4aae71;
+}
+
+.Tour {
+    background-color: #97b4f0;
+}

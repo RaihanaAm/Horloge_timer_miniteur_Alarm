@@ -64,26 +64,25 @@ export const Horloge = () => {
                 <div className="mondial" >
                     <p className="contiresName">New York, États-Unis</p>
                     <hr />
-                    <h1 className="heurCountries">{+formattedHour-5===24 ? 0 :+formattedHour-5}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
+                    <h1 className="heurCountries">{+formattedHour-5 >=24 ? (+formattedHour-5) - 24 :+formattedHour-5}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
                     <p className="decalage">Aujourd'hui,-5H</p>
-
                 </div>
                 <div className="mondial" >
                     <p className="contiresName">Moscou, Russie</p>
                     <hr />
-                    <h1 className="heurCountries">{+formattedHour+2===24 ? 0 :+formattedHour+2}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
+                    <h1 className="heurCountries">{+formattedHour+2>=24 ?(+formattedHour+2) - 24 :+formattedHour+2}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
                     <p className="decalage">Aujourd'hui,+2H</p>
 
                 </div><div className="mondial" >
                     <p className="contiresName">Tokyo, Japon</p>
                     <hr />
-                    <h1 className="heurCountries">{+formattedHour+8===24 ? 0 :+formattedHour+8}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
+                    <h1 className="heurCountries">{+formattedHour+8>=24 ? (+formattedHour+8) - 24 :+formattedHour+8}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
                     <p className="decalage">Aujourd'hui,+8H</p>
 
                 </div><div className="mondial" >
                     <p className="contiresName">Berlin, Allemagne</p>
                     <hr />
-                    <h1 className="heurCountries">{+formattedHour+1===24 ? 0 :+formattedHour+1}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
+                    <h1 className="heurCountries">{+formattedHour+1>=24 ? (+formattedHour+1) - 24 :+formattedHour+1}:{formattedMinute}:<span className="seconds">{formattedSecond}</span></h1>
                     <p className="decalage">Aujourd'hui,+1H</p>
 
                 </div>

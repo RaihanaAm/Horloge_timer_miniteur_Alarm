@@ -13,6 +13,8 @@ export const Chrono = () => {
     const [tru, setTru] = useState(true);
     const [disabled, setDisabled] = useState(false);
     const [rr, setRr] = useState()
+    const [time, setTime] = useState([])
+
 
 
 
@@ -25,7 +27,7 @@ export const Chrono = () => {
                         minute: prevChrono.minute,
                         second: prevChrono.second + 1
                     }))
-                }, 1000)
+                }, 20)
             )
             setDisabled(true)
         }
@@ -45,6 +47,21 @@ export const Chrono = () => {
         })
         stop();
         setDisabled(false)
+        setTime([])
+
+
+    }
+    const Tour = () => {
+        let tour = `${formattedHour}:${formattedminute}:${formattedsecond}`
+        let timees={
+            hour:formattedHour,
+            minute:formattedminute,
+            second:formattedsecond
+        }
+// loop
+        let update = [...time];
+        update.push(tour)
+        setTime(update)
     }
 
     if (formattedsecond === "60") {
@@ -60,20 +77,47 @@ export const Chrono = () => {
             second: 0
         }))
     }
+    console.log(time.length);
     return (
-        <div className="global flex">
-            <div className="tops"></div>
-            <div className="top"></div>
-            <div className="glob   flex">
-                <div className="flex glo">
-                    <h1 className="flex h1">{formattedHour}:{formattedminute}:{formattedsecond}</h1>
-                    <div className="mt-3" >
-                        <button className="btn btn-success" onClick={count} disabled={disabled}>Play</button>
-                        <button className="btn ms-1 btn-warning" onClick={stop} >Stop</button>
-                        <button className="btn ms-1 btn-danger" onClick={reset} >Reset</button>
-                    </div>
+        <div className="Chronos flex">
+            <div className="titles">
+                <h3 className="title">Minutes</h3>
+                <h3 className="title">Seconds</h3>
+                <h3 className="title">MSecondes</h3>
+                <div className="houres">
+                    <h3 className="hour">{formattedHour}</h3>
+                    <h3 className="hour">{formattedminute}</h3>
+                    <h3 className="hour">{formattedsecond}</h3>
                 </div>
             </div>
+
+            <div className="Chrono flex">
+                <h1 className="ChronoTime"><span className="numbers">00</span>:<span className="numbers">00</span>:<span className="numbers">00</span></h1>
+            </div>
+            <div className={ time.length===0 ? "none" :"records"}>
+                <div className="tours">
+                    <h3 className="tour">Tour</h3>
+                    <h3 className="tour">Temps au tour</h3>
+                </div>
+                {
+                    time.map((element, index) =>
+                        <h5 className=" record"><span className="order">{index + 1}</span> <span className="orde">{element}</span> </h5>
+                    )
+                }
+            </div>
+
+
+
+
+
+            <div className="btnn" >
+                <button className="button play" onClick={count} disabled={disabled}>Play</button>
+                <button className="button Tour" onClick={Tour} disabled={!disabled} >Tour</button>
+                <button className="button stop" onClick={stop} >Stop</button>
+                <button className="button reset" onClick={reset} >Reset</button>
+            </div>
+
         </div>
     )
 }
+
