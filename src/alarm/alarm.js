@@ -1,5 +1,7 @@
 import "./alarm.css"
 import React, { useEffect, useState } from 'react';
+import notif from "../assets/images/notif.jpg"
+import { MdDelete } from "react-icons/md";
 
 export const Alarm = () => {
     const [active, setActive] = useState(true);
@@ -113,39 +115,49 @@ export const Alarm = () => {
 
 
     return (
-        <div>
+        <div className="alarm">
             {/* page 1 */}
             <div className={!active ? "d-none " : ""} >
-                <h1 className="logo" > Alarm </h1>
+                <div className="titleAlarm">
+                    <h1 className="logos" >My Alarm</h1>
+                    <div className='btnAlarm'>
+                        <button onClick={displayNone} className='addAlarm'>Add new alarm</button>
+                    </div>
+                </div>
+                <div className="im">
+                    <img className={`image  ${newAlarm.length === 0 ? "" : "d-none"}`} src={notif} alt="jj" />
+                </div>
+                <div className="Allalarms">
                 {
                     newAlarm.map((element, index) =>
-                        <div key={index} className='finaleAlarm  flex'>
-                            <h1 className=''>{element.name} {element.time}</h1>
-                            <button className='x ' onClick={() => { remove(index) }}>x</button>
+                        <div key={index} className='finaleAlarm '>
+                            <div >
+                                <h1 className='alarmTime'> {element.time}</h1>
+                                <p className='alarmName'>{element.name}</p>
+                            </div>
+                            <h3 className="delete" onClick={() => { remove(index) }}><MdDelete /> </h3>
                         </div>
                     )
                 }
-                <div className='btnAlarm'>
-                    <button onClick={displayNone} className='addAlarm'>+</button>
                 </div>
+
             </div>
             {/* page 2 */}
-            <div className='flex bodu'>
+            <div className='flex '>
 
-                <div className={`setAlarm ${active ? "d-none " : ""}`}>
+                <div className={`setAlarm flex ${active ? "d-none " : ""}`}>
                     <h5 className='newAlarm flex'>New alarm</h5>
                     <h6 onClick={displayNone} className='annuler'>Annuler</h6>
                     <div className='flex'>
-                        <input type="time" className='time' value={newR.time} onChange={(e) => { getTime(e, setNewR) }} required />
+                        <input type="time" className='AlarmTime' value={newR.time} onChange={(e) => { getTime(e, setNewR) }} required />
                     </div>
-                    <div className='flex'>
-
-                        <label htmlFor="title">Alarm name</label>
-                        <input type="text" value={newR.name} onChange={(e) => { getData(e, setNewR) }} />
+                    <div className='inputName'>
+                        <label className="inputTitle">Alarm name</label>
+                        <input type="text" className="addName" value={newR.name} onChange={(e) => { getData(e, setNewR) }} />
                     </div>
 
                     <div className='flex'>
-                        <button onClick={() => { displayNone(); valuer(); verify() }} className='enregAlarm'>Enregistrer</button>
+                        <button onClick={() =>{ displayNone(); valuer(); verify() }} className='enregAlarm'>Enregistrer</button>
                     </div>
 
                 </div>
